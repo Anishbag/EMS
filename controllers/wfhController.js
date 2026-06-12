@@ -1,9 +1,6 @@
 import WFH from "../models/WFH.js";
 
-export const applyWFH = async (
-  req,
-  res
-) => {
+export const applyWFH = async (req,res) => {
 
   try {
 
@@ -49,10 +46,7 @@ export const applyWFH = async (
 };
 
 
-export const getMyWFH = async (
-  req,
-  res
-) => {
+export const getMyWFH = async (req,res) => {
 
   try {
 
@@ -76,10 +70,7 @@ export const getMyWFH = async (
 
 
 
-export const getWFHRequests = async (
-  req,
-  res
-) => {
+export const getWFHRequests = async (req,res) => {
 
   try {
 
@@ -102,10 +93,7 @@ export const getWFHRequests = async (
 };
 
 
-export const approveWFH = async (
-  req,
-  res
-) => {
+export const approveWFH = async (req,res) => {
 
   try {
 
@@ -178,10 +166,7 @@ export const approveWFH = async (
 };
 
 
-export const rejectWFH = async (
-  req,
-  res
-) => {
+export const rejectWFH = async (req,res) => {
 
   try {
 

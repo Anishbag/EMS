@@ -5,6 +5,8 @@ import bcrypt from "bcryptjs";
 export const createEmployee = async (req, res) => {
   try {
 
+    console.log(req.body);
+
     const {
       name,
       email,
@@ -77,10 +79,7 @@ export const getEmployees = async (req, res) => {
 
 
 
-export const getEmployeeById = async (
-  req,
-  res
-) => {
+export const getEmployeeById = async (req,res) => {
 
   try {
 
@@ -110,10 +109,7 @@ export const getEmployeeById = async (
 };
 
 
-export const updateEmployee = async (
-  req,
-  res
-) => {
+export const updateEmployee = async (req,res) => {
 
   try {
 
@@ -147,10 +143,7 @@ export const updateEmployee = async (
 
 
 
-export const deleteEmployee = async (
-  req,
-  res
-) => {
+export const deleteEmployee = async (req,res) => {
 
   try {
 

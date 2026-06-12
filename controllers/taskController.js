@@ -53,10 +53,7 @@ export const getTasks = async (req, res) => {
 };
 
 
-export const getMyTasks = async (
-  req,
-  res
-) => {
+export const getMyTasks = async (req,res) => {
 
   try {
 
@@ -76,10 +73,7 @@ export const getMyTasks = async (
 };
 
 
-export const updateTaskStatus = async (
-  req,
-  res
-) => {
+export const updateTaskStatus = async (req,res) => {
 
   try {
 
@@ -120,10 +114,7 @@ export const updateTaskStatus = async (
 
 
 
-export const updateTask = async (
-  req,
-  res
-) => {
+export const updateTask = async (req,res) => {
 
   try {
 
@@ -162,10 +153,7 @@ export const updateTask = async (
 };
 
 
-export const deleteTask = async (
-  req,
-  res
-) => {
+export const deleteTask = async (req,res) => {
 
   try {
 
