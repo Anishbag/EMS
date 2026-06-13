@@ -4,7 +4,7 @@ import cors from "cors";
 import authRoutes from "./routes/authRoutes.js";
 import employeeRoutes from "./routes/employeeRoutes.js";
 import taskRoutes from "./routes/taskRoutes.js";
-//import leaveRoutes from "./routes/leaveRoutes.js";
+import leaveRoutes from "./routes/leaveRoutes.js";
 import wfhRoutes from "./routes/wfhRoutes.js";
 //import dashboardRoutes from "./routes/dashboardRoutes.js";
 
@@ -20,7 +20,7 @@ app.use("/api/employees", employeeRoutes);
 
 app.use("/api/tasks", taskRoutes);
 
-//app.use("/api/leaves", leaveRoutes);
+app.use("/api/leaves", leaveRoutes);
 
 app.use("/api/wfh", wfhRoutes);
 
