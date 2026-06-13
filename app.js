@@ -6,7 +6,7 @@ import employeeRoutes from "./routes/employeeRoutes.js";
 import taskRoutes from "./routes/taskRoutes.js";
 import leaveRoutes from "./routes/leaveRoutes.js";
 import wfhRoutes from "./routes/wfhRoutes.js";
-//import dashboardRoutes from "./routes/dashboardRoutes.js";
+import dashboardRoutes from "./routes/dashboardRoutes.js";
 
 const app = express();
 
@@ -24,7 +24,7 @@ app.use("/api/leaves", leaveRoutes);
 
 app.use("/api/wfh", wfhRoutes);
 
-//app.use("/api/dashboard", dashboardRoutes);
+app.use("/api/dashboard", dashboardRoutes);
 
 export default app;
 
