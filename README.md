@@ -1,66 +1,71 @@
-# EMS
-Employee Management System (EMS)
+# 🚀 Employee Management System (EMS)
 
-A full-stack Employee Management System built using Node.js, Express.js, MongoDB, and JWT Authentication.
-
-Features
-
-Admin
-
-- Login with JWT Authentication
-- Create Employees
-- Update Employees
-- Delete Employees
-- Assign Tasks
-- Assign Task to All Employees
-- Approve / Reject Leave Requests
-- Approve / Reject WFH Requests
-- Search Employees
-- Filter Employees by Department
-- Dashboard Analytics
-
-Employee
-
-- Login
-- View Profile
-- View Assigned Tasks
-- Update Task Status
-- Apply for Leave
-- View Leave History
-- Apply for Work From Home (WFH)
-- View WFH History
-
-Work From Home (WFH) Rules
-
-- Only one active WFH request per employee
-- Only one employee can work from home at a time across the company
-- WFH duration is fixed to 30 days
-- Automatic expiry after 30 days
+A full-stack Employee Management System built using **Node.js**, **Express.js**, **MongoDB Atlas**, and **JWT Authentication**.
 
 ---
 
-Tech Stack
+## ✨ Features
 
-Backend
+### 👨‍💼 Admin
 
-- Node.js
-- Express.js
-- JWT Authentication
-- Bcrypt.js
+* JWT Authentication Login
+* Create Employees
+* Update Employees
+* Delete Employees
+* Assign Tasks
+* Assign Task to All Employees
+* Approve / Reject Leave Requests
+* Approve / Reject WFH Requests
+* Search Employees
+* Filter Employees by Department
+* Dashboard Analytics
 
-Database
+### 👨‍💻 Employee
 
-- MongoDB Atlas
-
-Deployment
-
-- Backend: Render
+* Login
+* View Profile
+* View Assigned Tasks
+* Update Task Status
+* Apply for Leave
+* View Leave History
+* Apply for Work From Home (WFH)
+* View WFH History
 
 ---
 
-Project Structure
+## 🏠 Work From Home (WFH) Rules
 
+* Only one active WFH request per employee
+* Only one employee can work from home at a time across the company
+* WFH duration is fixed to 30 days
+* Automatic expiry after 30 days
+
+---
+
+## 🛠️ Tech Stack
+
+### Backend
+
+* Node.js
+* Express.js
+* JWT Authentication
+* Bcrypt.js
+
+### Database
+
+* MongoDB Atlas
+
+### Deployment
+
+* Render
+
+---
+
+## 📁 Project Structure
+
+```text
 backend
+│
 ├── config
 ├── controllers
 ├── middleware
@@ -70,88 +75,95 @@ backend
 ├── cron
 ├── app.js
 └── server.js
-
+```
 
 ---
 
-API Endpoints
+## 🔗 API Endpoints
 
-Authentication
+### Authentication
 
+```http
 POST /api/auth/login
+GET  /api/auth/profile
+```
 
-GET /api/auth/profile
+### Employees
 
-Employees
-
-GET /api/employees
-
-POST /api/employees
-
-PUT /api/employees/:id
-
+```http
+GET    /api/employees
+POST   /api/employees
+PUT    /api/employees/:id
 DELETE /api/employees/:id
+```
 
-Tasks
+### Tasks
 
-GET /api/tasks
-
-POST /api/tasks
-
-PUT /api/tasks/:id
-
+```http
+GET    /api/tasks
+POST   /api/tasks
+PUT    /api/tasks/:id
 DELETE /api/tasks/:id
+```
 
-Leaves
+### Leaves
 
+```http
 POST /api/leaves
+GET  /api/leaves
 
-GET /api/leaves
+PUT  /api/leaves/approve/:id
+PUT  /api/leaves/reject/:id
+```
 
-PUT /api/leaves/approve/:id
+### WFH
 
-PUT /api/leaves/reject/:id
-
-WFH
-
+```http
 POST /api/wfh/apply
+GET  /api/wfh
 
-GET /api/wfh
-
-PUT /api/wfh/approve/:id
-
-PUT /api/wfh/reject/:id
+PUT  /api/wfh/approve/:id
+PUT  /api/wfh/reject/:id
+```
 
 ---
 
-Installation
+## ⚙️ Installation
 
-Clone Repository
+### Clone Repository
 
+```bash
 git clone <repository-url>
+```
 
-Backend
+### Install Dependencies
 
-cd backend
-
+```bash
 npm install
+```
 
+### Run Server
+
+```bash
 npm run dev
-
+```
 
 ---
 
-Environment Variables
+## 🔐 Environment Variables
 
+```env
 PORT=5000
 
 MONGO_URI=your_mongodb_uri
 
 JWT_SECRET=your_secret_key
+```
 
 ---
 
+## 👨‍💻 Author
 
-Author
+**Anish Bag**(Backend)
 
-Anish Bag (Backend)
+
