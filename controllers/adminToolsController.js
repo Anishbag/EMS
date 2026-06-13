@@ -30,10 +30,7 @@ export const searchEmployees = async (req, res) => {
 
 
 
-export const filterByDepartment = async (
-  req,
-  res
-) => {
+export const filterByDepartment = async (req,res) => {
 
   try {
 
@@ -62,10 +59,7 @@ export const filterByDepartment = async (
 
 
 
-export const assignTaskToAll = async (
-  req,
-  res
-) => {
+export const assignTaskToAll = async (req,res) => {
 
   try {
 
