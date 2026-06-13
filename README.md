@@ -155,5 +155,3 @@ JWT_SECRET=your_secret_key
 Author
 
 Anish Bag (Backend)
-
-Full Stack Web Developer
