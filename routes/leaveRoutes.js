@@ -10,11 +10,11 @@ const router = express.Router();
 
 //-->employees der jonno ata
 
-router.post("/",protect,authorize("Employee"),
+router.post("/",protect,authorize("employee"),
   applyLeave
 );
 
-router.get("/my",protect,authorize("Employee"),
+router.get("/my",protect,authorize("employee"),
   getMyLeaves
 );
 
@@ -24,21 +24,21 @@ router.get("/my",protect,authorize("Employee"),
 router.get(
   "/",
   protect,
-  authorize("Admin"),
+  authorize("admin"),
   getLeaves
 );
 
 router.put(
   "/approve/:id",
   protect,
-  authorize("Admin"),
+  authorize("admin"),
   approveLeave
 );
 
 router.put(
   "/reject/:id",
   protect,
-  authorize("Admin"),
+  authorize("admin"),
   rejectLeave
 );
 

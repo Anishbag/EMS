@@ -10,7 +10,7 @@ const router = express.Router();
 router.get(
   "/admin",
   protect,
-  authorize("Admin"),
+  authorize("admin"),
   getAdminDashboard
 );
 
@@ -18,7 +18,7 @@ router.get(
 router.get(
   "/employee",
   protect,
-  authorize("Employee"),
+  authorize("employee"),
   getEmployeeDashboard
 );
 

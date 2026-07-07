@@ -27,14 +27,14 @@ from "../controllers/wfhController.js";
 router.post(
   "/apply",
   protect,
-  authorize("Employee"),
+  authorize("employee"),
   applyWFH
 );
 
 router.get(
   "/my",
   protect,
-  authorize("Employee"),
+  authorize("employee"),
   getMyWFH
 );
 
@@ -43,21 +43,21 @@ router.get(
 router.get(
   "/",
   protect,
-  authorize("Admin"),
+  authorize("admin"),
   getWFHRequests
 );
 
 router.put(
   "/approve/:id",
   protect,
-  authorize("Admin"),
+  authorize("admin"),
   approveWFH
 );
 
 router.put(
   "/reject/:id",
   protect,
-  authorize("Admin"),
+  authorize("admin"),
   rejectWFH
 );
 

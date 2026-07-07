@@ -16,28 +16,28 @@ const router = express.Router();
 router.get(
   "/search",
   protect,
-  authorize("Admin"),
+  authorize("admin"),
   searchEmployees
 );
 
 router.get(
   "/department/:department",
   protect,
-  authorize("Admin"),
+  authorize("admin"),
   filterByDepartment
 );
 
 router.post(
   "/assign-all",
   protect,
-  authorize("Admin"),
+  authorize("admin"),
   assignTaskToAll
 );
 
 router.delete(
   "/department/:department",
   protect,
-  authorize("Admin"),
+  authorize("admin"),
   deleteDepartmentEmployees
 );
 

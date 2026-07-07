@@ -21,28 +21,28 @@ const router = express.Router();
 router.post(
   "/",
   protect,
-  authorize("Admin"),
+  authorize("admin"),
   createTask
 );
 
 router.get(
   "/",
   protect,
-  authorize("Admin"),
+  authorize("admin"),
   getTasks
 );
 
 router.put(
   "/:id",
   protect,
-  authorize("Admin"),
+  authorize("admin"),
   updateTask
 );
 
 router.delete(
   "/:id",
   protect,
-  authorize("Admin"),
+  authorize("admin"),
   deleteTask
 );
 
@@ -50,14 +50,14 @@ router.delete(
 router.get(
   "/mytasks",
   protect,
-  authorize("Employee"),
+  authorize("employee"),
   getMyTasks
 );
 
 router.put(
   "/status/:id",
   protect,
-  authorize("Employee"),
+  authorize("employee"),
   updateTaskStatus
 );
 
