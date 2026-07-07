@@ -18,35 +18,35 @@ const router = express.Router();
 router.post(
   "/",
   protect,
-  authorize("Admin"),
+  authorize("admin"),
   createEmployee
 );
 
 router.get(
   "/",
   protect,
-  authorize("Admin"),
+  authorize("admin"),
   getEmployees
 );
 
 router.get(
   "/:id",
   protect,
-  authorize("Admin"),
+  authorize("admin"),
   getEmployeeById
 );
 
 router.put(
   "/:id",
   protect,
-  authorize("Admin"),
+  authorize("admin"),
   updateEmployee
 );
 
 router.delete(
   "/:id",
   protect,
-  authorize("Admin"),
+  authorize("admin"),
   deleteEmployee
 );
 
