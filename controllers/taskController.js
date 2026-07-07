@@ -1,25 +1,63 @@
 import Task from "../models/Task.js";
+import Employee from "../models/Employee.js";
 
 
 export const createTask = async (req, res) => {
   try {
-
     const {
       title,
       description,
       assignedTo,
+      assignAll,
+      department,
       dueDate
     } = req.body;
 
-    const task = await Task.create({
-      title,
-      description,
-      assignedTo,
-      assignedBy: req.user.id,
-      dueDate
-    });
+    let userIds = [];
 
-    res.status(201).json(task);
+    // Assign to all employees
+    if (assignAll) {
+      const employees = await Employee.find().populate("userId");
+
+      userIds = employees.map(emp => emp.userId._id);
+    }
+
+    // Assign by department
+    else if (department) {
+      const employees = await Employee.find({
+        department
+      }).populate("userId");
+
+      userIds = employees.map(emp => emp.userId._id);
+    }
+
+    // Assign multiple employees
+    else if (Array.isArray(assignedTo)) {
+      userIds = assignedTo;
+    }
+
+    // Assign single employee
+    else {
+      userIds = [assignedTo];
+    }
+
+    const tasks = await Promise.all(
+      userIds.map(userId =>
+        Task.create({
+          title,
+          description,
+          assignedTo: userId,
+          assignedBy: req.user.id,
+          dueDate
+        })
+      )
+    );
+
+    res.status(201).json({
+      message: "Task assigned successfully",
+      totalAssigned: tasks.length,
+      tasks
+    });
 
   } catch (error) {
 
