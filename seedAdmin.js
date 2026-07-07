@@ -15,7 +15,7 @@ const createAdmin = async () => {
     await mongoose.connect(process.env.MONGO_URI);
 
     const existingAdmin = await User.findOne({
-      email: "admin@gmail.com"
+      email: "admin@google.com"
     });
 
     if (existingAdmin) {
