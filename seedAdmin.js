@@ -24,11 +24,11 @@ const createAdmin = async () => {
     }
 
     const hashedPassword =
-      await bcrypt.hash("admin123", 10);
+      await bcrypt.hash("12345678", 10);
 
     await User.create({
       name: "Admin",
-      email: "admin@gmail.com",
+      email: "admin@google.com",
       password: hashedPassword,
       role: "Admin"
     });
