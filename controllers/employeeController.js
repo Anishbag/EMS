@@ -158,7 +158,7 @@ export const deleteEmployee = async (req, res) => {
 export const getDepartments = async (req, res) => {
   try {
 
-    const departments = await User.distinct("department");
+    const departments = await Employee.distinct("department");
 
     res.status(200).json(departments);
 
