@@ -149,3 +149,24 @@ export const deleteEmployee = async (req, res) => {
     });
   }
 };
+
+
+
+
+// Get All Departments
+
+export const getDepartments = async (req, res) => {
+  try {
+
+    const departments = await User.distinct("department");
+
+    res.status(200).json(departments);
+
+  } catch (error) {
+
+    res.status(500).json({
+      message: error.message
+    });
+
+  }
+};

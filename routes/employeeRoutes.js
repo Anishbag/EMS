@@ -5,7 +5,8 @@ import {
   getEmployees,
   getEmployeeById,
   updateEmployee,
-  deleteEmployee
+  deleteEmployee,
+  getDepartments
 }
 from "../controllers/employeeController.js";
 
@@ -29,6 +30,15 @@ router.get(
   getEmployees
 );
 
+
+router.get(
+  "/departments",
+  protect,
+  authorize("admin"),
+  getDepartments
+);
+
+
 router.get(
   "/:id",
   protect,
@@ -49,5 +59,8 @@ router.delete(
   authorize("admin"),
   deleteEmployee
 );
+
+
+
 
 export default router;
